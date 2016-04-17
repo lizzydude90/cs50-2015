@@ -3,7 +3,7 @@
  * 
  * Lizzie Eng
  * 
- * Generate half pyramids not greater than 23!
+ * Generate 2x half pyramids not greater than 23!
  * 
  * (1) Prompt the user for a height
  * (2) Height must be a positive integer and less than 23
@@ -23,7 +23,7 @@ int main (void)
     }
     while (h > 23 || h < 0 );
     
-    for (int i = 0; i < h; i++) //print a # every count
+    for (int i = 0; i < h; i++) //print a # per count
     {
         for (int j = 0; j < i; j++) // prints additional # per count
         {
