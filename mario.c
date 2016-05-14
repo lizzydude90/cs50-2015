@@ -5,31 +5,33 @@
  * 
  * Generate 2x half pyramids not greater than 23!
  * 
- * (1) Prompt the user for a height
- * (2) Height must be a positive integer and less than 23
  */
 
 #include <stdio.h>
 #include <cs50.h>
 
-
-int main (void)
+int main(void)
 {
-    int h; //height of the pyramid
-    do 
-    {
-        printf ("Height: "); 
-        h = GetInt();  
-    }
-    while (h > 23 || h < 0 );
+    int h;
     
-    for (int i = 0; i < h; i++) //print a # per count
+    do
     {
-        for (int j = 0; j < i; j++) // prints additional # per count
+        printf("Height: ");
+        h = GetInt();  //prompts users for height
+    }
+    while (h > 23 || h < 0);
+    
+    for (int i = 0; i < h; i++) //prints base hashes, this code gets executed first
+    {
+            for (int j = 0; j < h-i-1; j++) // prints spaces in between
         {
-            printf ("#");
+            printf (" ");
         }
-       printf ("#\n");
+             for (int k = 0; k < i; k++) // prints secondary hashes
+        {
+            printf ("#"); 
+        }
+        printf("##\n"); 
     }
     return 0;
 }
