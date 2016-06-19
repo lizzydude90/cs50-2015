@@ -23,8 +23,8 @@ int main(void)
 {
     do { // get user input first
         printf("How much change is owed?\n");
-        x = roundf(GetFloat() * 100) / 100; // round to 2 decimal places
-        i = (x * 100); // convert to int as % can only accept int values
+        x = GetFloat();
+        i = roundf(x * 100); 
     } while (x < 0); 
 
 // Greedy algorithm begins, take remainder and keep dividing accordingly
