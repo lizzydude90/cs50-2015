@@ -24,7 +24,7 @@ int main(void)
     do { // get user input first
         printf("How much change is owed?\n");
         x = GetFloat();
-        i = roundf(x * 100); 
+        i = roundf(x * 100); //rounding integer value due to floating point imprecision
     } while (x < 0); 
 
 // Greedy algorithm begins, take remainder and keep dividing accordingly
